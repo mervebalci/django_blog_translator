@@ -40,7 +40,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'blog'
 ]
+# These installed_apps are default apps required by django.
+# As saying "python manage.py startapp blog" inside virtual env, an app named blog is created.
+# That's why 'blog' should be added in here as installed_apps.
+# Because this tells Django about the new app is added.
+# And this will let me add some content into the files of the blog app directory.
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
