@@ -138,6 +138,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # After created the folder name templates, this should be told to Django settings where this template located.
 # To do that:
+# And DO NOT FORGET to import os
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 # BASE_DIR is the root directory.
 # And it's joining to 'templates' to create single absolute path, which will be the directory of templates (TEMPLATES_DIR).
