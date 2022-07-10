@@ -14,6 +14,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -130,3 +131,14 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+# Creating a PATH to the TEMPLATES DIRECTORY
+
+# After created the folder name templates, this should be told to Django settings where this template located.
+# To do that:
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+# BASE_DIR is the root directory.
+# And it's joining to 'templates' to create single absolute path, which will be the directory of templates (TEMPLATES_DIR).
+# 'templates' is the path to the path where HTML files are.

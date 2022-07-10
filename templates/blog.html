@@ -1,0 +1,21 @@
+<!-- Creating an HTML template, which is responsible to render the content on the browser -->
+
+<!-- Every html document should start with this below <!DOCTYPE html> -->
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>{{object.title}}</h1>     <!-- This object is the blog instance -->
+        <p>{{object.content}}</p>
+        <p>{{object.author}}</p>
+    </body>
+</html>
+
+<!-- Instead of giving a static heading or paragraph, to make it dynamic and to pull the text from database table, Djamgo template language is used.
+    Now, HTML template should be connected with the models.py file.
+    And this HTML template has some variables which are waiting to be filled with content, with values. 
+    Title has to come from the SQL database. And there should be a way to connect the HTML template with that database.
+    Since in Python, this class Post is the representative of that database table.
+    Need to connect blog.html with this class post. Here's where the view.py comes in handy. -->
+
+
+<!-- After created this, in settings.py file, a path should be created to locate this HTML template -->
