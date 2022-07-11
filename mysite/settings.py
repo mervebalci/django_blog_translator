@@ -20,6 +20,18 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+# Creating a PATH to the TEMPLATES DIRECTORY
+
+# After created the folder name templates, this should be told to Django settings where this template located.
+# To do that:
+# And DO NOT FORGET to import os
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+# BASE_DIR is the root directory.
+# And it's joining to 'templates' to create single absolute path, which will be the directory of templates (TEMPLATES_DIR).
+# 'templates' is the path to the path where HTML files are.
+
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
@@ -64,7 +76,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATES_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -131,15 +143,3 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-
-
-# Creating a PATH to the TEMPLATES DIRECTORY
-
-# After created the folder name templates, this should be told to Django settings where this template located.
-# To do that:
-# And DO NOT FORGET to import os
-TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
-# BASE_DIR is the root directory.
-# And it's joining to 'templates' to create single absolute path, which will be the directory of templates (TEMPLATES_DIR).
-# 'templates' is the path to the path where HTML files are.
