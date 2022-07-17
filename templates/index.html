@@ -1,0 +1,16 @@
+<!-- Creating a Homepage
+    Usually the homepage is called as index.html -->
+
+<!-- Every html document should start with this below <!DOCTYPE html> -->
+<!DOCTYPE html>
+<html>
+    <body>
+        {% for post in post_list %}    <!-- created a FOR LOOP -->
+            <h2>{{post.title}}</h2>
+            <p>{{post.author}}</p>
+        {% endfor %}    <!-- ended the FOR LOOP -->
+    </body>
+</html>
+
+<!-- post_list is a view which it needs to be defined in views.py
+    and the class name has to be in the same format with the one inside the for loop -->
