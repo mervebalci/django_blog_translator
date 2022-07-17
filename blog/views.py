@@ -18,3 +18,12 @@ class BlogView(generic.DetailView):
 # Django expects from this BlogView class to have a model and template_name variables.
 # This model variable should point to the name of the model that should be connected to the blog.
 # The model is Post which is class name from models.py and should be imported (line9).
+
+
+class HomeView(generic.TemplateView):
+    template_name = 'index.html'
+    # TemplateView means when you only need to render a template without getting data from a model.
+    # DetailView gets data from models and passes them to templates.
+    # So, this class doesn't need a MODEL. Because index.html is a static page.
+    # It's not getting any data from a database like blog.html
+    # However, blog.html gets data from database such as title, content, author.
