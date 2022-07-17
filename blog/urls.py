@@ -9,7 +9,7 @@ from django.urls import path
 
 urlpatterns = [
     path('<slug:slug>', views.BlogView.as_view(), name='blog_view'),
-    path('', views.HomeView.as_view(), name='home_view')
+    path('about/', views.AboutView.as_view(), name='about_view')
 ]
 # When the user visits a certain URL, let's say example.com/dogs
 # Django will go to DB table and search in each row for dogs.
