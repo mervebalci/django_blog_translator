@@ -6,7 +6,13 @@
 <html>
     <body>
         {% for post in post_list %}    <!-- created a FOR LOOP -->
-            <h2>{{post.title}}</h2>
+            <a href="{% url 'blog_view' post.slug %}"><h2>{{post.title}}</h2></a>
+            <!-- To make the title a clickable link, <h2> tag should be replaced by <a> tag.
+                And these <a> tags should come as a value of href property
+                Inside of the "", "localhost:8000/{{post.slug}}" can be written.
+                However, this is not ideal, because local host will be changed to sth else when the app is deployed.
+                Best way will be using a url tag which is {% url '' post.slug %}. This makes url the keyword.
+                Inside of the '' goes the url of that current post that is being iterated in the loop, which we can get from urls.py -->
             <p>{{post.author}}</p>
         {% endfor %}    <!-- ended the FOR LOOP -->
     </body>
