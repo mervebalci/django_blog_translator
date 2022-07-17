@@ -54,6 +54,13 @@ class Post(models.Model):
     # So this would be a good way to distinguish between the two types of posts, articles.
 
 
+    # In the ADMIN INTERFACE, posts are seen as Post object (1), Post object (2) and so on.
+    # It is hard to find the post that user is looking for.
+    # To make it more clear and give an easy access to user, it's better to display the TITLE of the content.
+    def __str__(self):
+        return self.title
+
+
 # To Apply the Model to the Database
 # Inside terminal in the virtual environment;
 # > python manage.py makemigrations
