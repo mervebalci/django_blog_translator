@@ -19,10 +19,10 @@
                         {{post.title}}
                     </h2>
                     <p class="card-text">   <!-- Giving content to each of the blogs -->
-                        {{post.content}}
+                        {{post.content | slice:"600"}}    <!-- With SLICE filter, it will only show the first 500 characters from the contnent text -->
                     </p>
                     <p class="card-text">
-                        Author: {{post.author}}    <!-- Adding the author's name inside the card -->
+                        Author: {{post.author | title}}    <!-- Adding the author's name inside the card. With TITLE filter, it will make first letters of each word capital -->
                     </p>
                     <a class="btn btn-primary" href="{% url 'blog_view' post.slug %}">Read More</a>
                     <!-- To make the title a clickable link, <h2> tag should be replaced by <a> tag.
