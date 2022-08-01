@@ -1,9 +1,9 @@
 <!-- Creating a Aboutpage -->
 
-<!-- Every html document should start with this below <!DOCTYPE html> -->
-<!DOCTYPE html>
-<html>
-    <body>
-        This is the aboutpage!
-    </body>
-</html>
+{% extends 'base.html' %}
+{% block content %}
+        <div class="container">
+            <h2>This is the aboutpage!</h2>
+            <div>This is the content!</div>
+        </div>
+{% endblock content %}

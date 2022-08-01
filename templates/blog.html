@@ -1,14 +1,11 @@
 <!-- Creating an HTML template, which is responsible to render the content on the browser -->
 
-<!-- Every html document should start with this below <!DOCTYPE html> -->
-<!DOCTYPE html>
-<html>
-    <body>
+{% extends 'base.html' %}
+
         <h1>{{object.title}}</h1>     <!-- This object is the blog instance -->
         <p>{{object.content}}</p>
         <p>{{object.author}}</p>
-    </body>
-</html>
+
 
 <!-- Instead of giving a static heading or paragraph, to make it dynamic and to pull the text from database table, Djamgo template language is used.
     Now, HTML template should be connected with the models.py file.

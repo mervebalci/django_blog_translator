@@ -1,16 +1,8 @@
 <!-- Creating a Homepage
     Usually the homepage is called as index.html -->
 
-<!-- Every html document should start with this below <!DOCTYPE html> -->
-<!DOCTYPE html>
-<html lang="en">    <!-- set up the language as english -->
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-        <title>Blog Posts</title>    <!-- Added a title for the website -->
-    </head>
-    <body>
+{% extends 'base.html' %}
+{% block content %}
         <div class="container">
         {% for post in post_list %}    <!-- Created a FOR LOOP -->
             <div class="card m-3">    <!-- This puts each blog inside of a box with 3px margin gap -->
@@ -37,9 +29,7 @@
             </div>
         {% endfor %}    <!-- Ended the FOR LOOP -->
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-    </body>
-</html>
+{% endblock content %}
 
 <!-- post_list is a view which it needs to be defined in views.py
     and the class name has to be in the same format with the one inside the for loop -->
