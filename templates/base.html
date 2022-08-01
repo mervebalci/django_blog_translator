@@ -11,19 +11,18 @@
         <title>Blog Posts</title>    <!-- Added a title for the website -->
     </head>
     <body>
-
-<nav>
-    <div>
-        <ul>    <!-- ul creates a list of menu items, such as home, about, sign in... -->
-            <li>    <!-- li stands for list -->
-                <a href="{% url 'home' %}">Home</a>    <!-- a tags are for creating a link -->
-            </li>
-            <li>
-                <a href="{% url 'about_view' %}">About Us</a>    <!-- Pulled the name inside the quotes '' from blog > urls.py -->
-            </li>
-        </ul>
-    </div>
-</nav>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow mb-4" id="mainNav">    <!-- bg stands for background, mb stands for margin bottom -->
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">    <!-- ul creates a list of menu items, such as home, about, sign in... ml stands for margin left-->
+                    <li class="nav-item">    <!-- li stands for list -->
+                        <a class="navbar-brand p-4" href="{% url 'home' %}">Home</a>    <!-- a tags are for creating a link. p stands for padding -->
+                    </li>
+                    <li>
+                        <a class="navbar-brand p-2" href="{% url 'about_view' %}">About Us</a>    <!-- Pulled the name inside the quotes '' from blog > urls.py -->
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
 {% block content %}
 {% endblock content %}
@@ -33,7 +32,7 @@
 </html>
 
 
-<!-- After cut-paste line5-13 and 28-30, base.html became the parent.
-    And all the other html blog posts will be child of base.html and get all these line5-13 and 28-30 from base.html
+<!-- After cut-paste line5-13 and 30-32, base.html became the parent.
+    And all the other html blog posts will be child of base.html and get all these line5-13 and 30-32 from base.html
     This also allow us to apply bootstrap on every single web page.
     And now, need to tell each of the pages that it has to extend -->
