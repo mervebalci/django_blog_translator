@@ -53,7 +53,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog'
+    'blog',
+    'translator'
 ]
 # These installed_apps are default apps required by django.
 # As saying "python manage.py startapp blog" inside virtual env, an app named blog is created.
