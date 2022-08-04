@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container">
+    <form action="{% url 'get_translation' %}" method="post">    <!-- 'get_translation' is url pattern -->
+        <div class="row">
+            <div class="col-sm-6 mt-3 left">    <!-- col-sm-6 defines the column of that row -->
+                <textarea class="form-control" rows="3" name="my_textarea"></textarea>    <!-- first textarea is where user will write the input -->
+            </div>
+            <div class="col-sm-6 mt-3 left">
+                <textarea class="form-control" rows="3"></textarea>    <!-- second textarea is where user input will be translated by django app -->
+                <input class="btn btn-primary ml-3 mt-3" type="submit" value="Submit">    <!-- Submit Button -->
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock content %}
+
+
+<!-- When the user clicks on the Submit button, the url ('get_translation') will be visited.
+    And the method is POST method, which means that user is sending some data and
+    they expect to get back some data processed from the server -->
+
+
+<!-- type="submit" means when that submit button is pressed, <form> will be sent.
+    So will send the data (the original text of the user) in this case.
+    And value is the name of the button -->
