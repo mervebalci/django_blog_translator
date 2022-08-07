@@ -23,4 +23,4 @@ urlpatterns = [
 # WHEN USER VISITS THIS 'about/' URL, THIS AboutVIEW WILL CALL THAT ABOUT.HTML TEMPLATE TO BE RENDERED IN THE USER'S BROWSER
 
 
-# There is another urls.py file inside my_site folder which contains the configurations of the Django project, not the Django apps.
+# There is another urls.py file inside mysite folder which contains the configurations of the Django project, not the Django apps.

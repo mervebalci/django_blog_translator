@@ -22,8 +22,9 @@ from django.urls import path, include
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('blog.urls'))
+    path('admin/', admin.site.urls),    # This url pattern is for admin interface
+    path('', include('blog.urls')),    # This url pattern is for the blog app
+    path('translate/', include('translator.urls'))
 ]
 
 # This urls.py file is built by Django automatically.
@@ -38,4 +39,4 @@ urlpatterns = [
 
 # if you write, let's say myblog inside of the empty string, Django would be expecting:
 # example.com/myblog/dogs     NOT example.com/dogs
-# Lastly, include should be imported (line21)
+# Lastly, "include" should be imported (line21)
