@@ -6,10 +6,10 @@
         {% csrf_token %}
         <div class="row">
             <div class="col-sm-6 mt-3 left">    <!-- col-sm-6 defines the column of that row -->
-                <textarea class="form-control" rows="3" name="my_textarea"></textarea>    <!-- first textarea is where user will write the input -->
+                <textarea class="form-control" rows="3" name="my_textarea">{{input_text}}</textarea>    <!-- first textarea is where user will write the input -->
             </div>
             <div class="col-sm-6 mt-3 left">
-                <textarea class="form-control" rows="3"></textarea>    <!-- second textarea is where user input will be translated by django app -->
+                <textarea class="form-control" rows="3">{{output_text}}</textarea>    <!-- second textarea is where user input will be translated by django app -->
                 <input class="btn btn-primary ml-3 mt-3" type="submit" value="Submit">    <!-- Submit Button -->
             </div>
         </div>
