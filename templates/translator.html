@@ -2,7 +2,8 @@
 {% block content %}
 
 <div class="container">
-    <form action="{% url 'get_translation' %}" method="post">    <!-- 'get_translation' is url pattern -->
+    <form action="{% url 'translator_view' %}" method="post">    <!-- 'get_translation' is url pattern -->
+        {% csrf_token %}
         <div class="row">
             <div class="col-sm-6 mt-3 left">    <!-- col-sm-6 defines the column of that row -->
                 <textarea class="form-control" rows="3" name="my_textarea"></textarea>    <!-- first textarea is where user will write the input -->
