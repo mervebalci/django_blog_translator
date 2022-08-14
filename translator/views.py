@@ -1,11 +1,12 @@
 from django.shortcuts import render
+from . import translate
 
 # Create your views here.
 
 def translator_view(request):
     if request.method == 'POST':
         input_text = request.POST['my_textarea']
-        output = input_text.upper()
+        output = translate.translate(input_text)    # First translate is the module name coming from line2 and second translate is the function name coming from translate.py
         return render(request, 'translator.html', {'output_text':output, 'input_text':input_text})
     else:
         return render(request, 'translator.html')
